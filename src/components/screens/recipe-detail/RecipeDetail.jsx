@@ -29,7 +29,7 @@ const RecipeDetail = () => {
     <div>
       <div className={styles.container}>
         <h1>CookBook</h1>
-        <Link className={styles.button} to='/'>Назад</Link>
+        <Link className={styles.button} to='/CookBook'>Назад</Link>
       </div>
         <h2 className={styles.name}>{recipe.label}</h2>
         <img className={styles.img} src={recipe.image}/>
