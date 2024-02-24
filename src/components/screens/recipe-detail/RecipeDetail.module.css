@@ -1,0 +1,38 @@
+
+.container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.img {
+    border: 1px solid wheat;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.button{
+    font-size: 24x;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    width: 230px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(35, 29, 29);
+    border-radius: 7px;
+    border: 1px solid wheat;
+    color: wheat;
+}
+
+.button:hover {
+    background-color: wheat;
+    color: white;
+}
