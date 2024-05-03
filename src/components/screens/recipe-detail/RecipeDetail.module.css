@@ -1,8 +1,8 @@
 
 .container {
     display: flex;
-    justify-content: start;
     align-items: center;
+    max-width: 320px;
 }
 
 .img {
@@ -13,6 +13,7 @@
     background-color: white;
     border-radius: 7px;
 }
+
 
 .button{
     font-size: 24x;

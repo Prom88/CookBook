@@ -28,10 +28,11 @@
     box-sizing: border-box;
 }
 .info h2 {
+    color: antiquewhite;
     margin-top: 10px;
     margin-bottom: 5px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    max-height: 30px;
     text-wrap: wrap;
 }
 .info p {
