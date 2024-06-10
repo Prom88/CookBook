@@ -7,3 +7,15 @@
     box-sizing: border-box;
     flex-flow: wrap;
 }
+
+.fav {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: rgb(39, 32, 32);
+    margin-top: 25px;
+    border: solid 3px rgb(234, 186, 97);
+    border-radius: 20px;
+    display: flex;
+    width: 1900px;
+    height: 400px;
+}

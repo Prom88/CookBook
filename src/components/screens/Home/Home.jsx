@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import styles from './Home.module.css'
 import RecipeItem from './recipe-item/recipeItem.jsx'
 import RecipeService from '../../../services/Recipe.services.js'
-
+import { useSelector } from 'react-redux'
 
 function Home() {
   const [ingr, setIngr] = useState('')
@@ -39,16 +39,31 @@ function Home() {
   const filteredRecipes = getFilteredRecipes()
   //console.log(filteredRecipes)
 
-
+  const favorites = useSelector(state =>
+    state.favorites)
 
 
   if (!recipes) return <p>Loading...</p>
+
+  let favs = favorites => {
+    if (favorites.length) {
+      return favorites.map((recipe) => (
+        <RecipeItem key = {recipe.label} recipe = {recipe} itemId={recipe.label}/>
+      ))
+    } else return <p>No favorites</p>
+  }
+
 
   return (
     <div>
         <h1>CookBook</h1>
         <input onChange={event =>setIngr(event.target.value)} value={ingr}/>
         <div className={styles.container}>
+
+          <div className= {styles.fav}>
+            {favs(favorites)}
+          </div>
+
           {filteredRecipes.map((recipe) => ( 
             <RecipeItem key = {recipe.recipe.label} recipe = {recipe.recipe} itemId = {recipe.recipe.label}/>
           ))}

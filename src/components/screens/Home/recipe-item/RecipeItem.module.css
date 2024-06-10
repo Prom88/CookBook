@@ -17,6 +17,10 @@
     border-radius: 7px;
 }
 
+.fav {
+    display: flex;
+}
+
 .info {
     margin: 10px;
     width: 230px;
